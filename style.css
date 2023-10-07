@@ -1,0 +1,143 @@
+* {
+  margin: 5;
+  padding: 5;
+  box-sizing: border-box;
+}
+
+header {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+span {
+  color: rgb(55, 155, 105);
+}
+
+body {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  background-color: rgb(215, 235, 245);
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+/* style the layout of the navbar */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: rgb(45, 195, 145);
+  color: #ffff;
+}
+
+.nav-Links a {
+  color: #ffff;
+}
+
+.logo {
+  font-size: 35px;
+}
+
+/* style the navbar menu */
+.menu {
+  display: flex;
+  gap: 1em;
+  font-size: 20px;
+}
+
+/* example of pseudo-class usage */
+.menu li:hover {
+  background-color: rgb(35, 195, 255);
+  /* example of  css transition */
+  transition: 0.3s ease;
+}
+
+.menu li {
+  padding: 5px 14px;
+}
+
+/*.dropdown {
+  background-color: rgb(225, 60, 60);
+  position: 1em 0;
+  position: absolute; /* relative to the parent 
+  display: none;
+  border-radius: 8px;
+  top: 35px;
+} 
+
+
+
+.dropdown li + li {
+  margin-top: 10px;
+}
+
+.dropdown li {
+  padding: 0.5em 1em;
+  width: 8em;
+  text-align: center;
+}
+
+.dropdown li:hover {
+  background-color: blueviolet;
+} */
+
+.services {
+  display: block;
+}
+
+/* responsive styling for the navbar */
+input[type="checkbox"] {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  font-size: 24px;
+  user-select: none;
+}
+
+/* responsive design using css media queries */
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    position: absolute;
+    background-color: aqua;
+    right: 0;
+    left: 0;
+    text-align: center;
+    padding: 16px 0;
+  }
+
+  .menu li:hover {
+    display: inline-block;
+    background-color: aquamarine;
+    transition: 0.3s ease;
+  }
+  .menu li + li {
+    margin-top: 12px;
+  }
+  input[type="checkbox"]:checked ~ .menu {
+    display: block;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  /*.dropdown {
+    left: 50%;
+    top: 30px;
+    transform: translateX(35%);
+  }
+
+  .dropdown li:hover {
+    background-color: rgb(175, 255, 255);
+  } */
+}
